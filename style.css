@@ -1,0 +1,195 @@
+/* 
+////// For this challenge ///////
+
+- All text is in the text.md file
+
+// Requirements
+   1. Get all the navigation items next to one another
+   2. Add a space between all the items
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.section-title {
+    color: #87629A;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase; 
+    color: #23424A;
+    font-weight: 900;
+    background-color: #38CFD9;
+    padding: .75em 2em;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: .75; 
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+ 
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+header {
+    background: #136c72;
+    padding: 1em 0;
+}
+/*solu_2 to navigation last 2 element to left*/
+.logo{
+    margin-right:1em;
+}
+.nav{
+    display:flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-grow: 1;/* to using avaliable space to be side side for logo */
+
+}
+.nav__list {
+    margin:0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  
+    
+}
+/*to put nav-1 to be centered*/
+.nav__primary--list{
+    margin:0 auto;
+
+}
+.nav__item + .nav__item{
+   margin-left: 1em;
+}
+/*solu-1 to navigation last 2 element to left*/
+/*.nav__item--push-right{
+    margin-left: auto;
+}*/
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav__link--button {
+    background: #fff;
+    color: #136c72;
+    padding: .25em 1em;
+    border-radius: 10em;
+}
+
+.nav__link:hover {
+    opacity: .75;
+}
+
+
+.hero {
+    padding: 100px 0;
+    background-color: #23424A;
+    color: #FFF;
+}
+
+.hero__text { 
+    width: 62%;
+}
+
+.hero__img {
+    width: 32%;
+    align-self: flex-start;
+}
+
+.hero p {
+    margin-bottom: 3em;
+}
+
+.main {
+    margin-top: 3em;
+}
+
+.primary-content {
+    width: 62%;
+}
+
+.sidebar {
+    width: 32%;
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    background-color: #136c72;
+}
+@media(max-width:599px)
+{
+    h1 {
+        font-size: 1.8rem;
+    }
+   .container{
+     width:90%;
+    }
+    .row{
+        display:block;
+    }
+    .nav{
+        display: block;
+    }
+    .nav__item + .nav__item{
+        margin-left: 2.3em;
+     }
+    .logo{
+        margin-right:0em;
+    }
+
+    .nav__primary--list
+    {
+        margin:0.7em auto;
+    }
+    .hero__text { 
+        width: 100%;
+    }
+    .hero__img 
+    {
+        width:100%;
+        margin-top: 1em;
+    }
+    .primary-content {
+        width: 100%;
+    }
+    .sidebar {
+        width: 100%;
+ 
+    }
+}
+@media(min-width:600px)and (max-width:889px)
+{
+   .container{
+       width:90%;
+   }
+    
+}
